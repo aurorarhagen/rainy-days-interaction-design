@@ -108,9 +108,50 @@ main, .aboutmain {
 
 /** Index page**/
 
-.hero img {
-    max-width: 100%;
+.hero-text-section {
+    background-image: url(../images/wilfried-santer-5gDsYLQTpq8-unsplash\ \(1\).jpg);
+    min-height: 500px;
+    background-size: cover;
+    display: grid;
+    align-items: end;
+    grid-template-columns: repeat(auto-fit, minmax(370px,1fr));
+    text-decoration: none;
 }
+
+.hero-h1 {
+    font-family: 'Lora', serif;
+    font-size: 40px;
+    background-color: #2F4475;
+    color: #f8f7f6;
+    display: inline-block;
+    align-items: end;
+    padding: 0px 5px 10px 5px;
+    width: 330px;
+    text-align: center;
+  }
+
+  .hero-p {
+    font-family: 'Istok Web';
+    background-color: #2F4475;
+    color: rgb(255, 254, 254);
+    padding: 12px;
+    text-align: center;
+    max-width: 400px;
+}
+
+  .hero-button {
+    background-color: #f8f7f6;
+    border-radius: .2rem;
+    display: inline-block;
+    padding: .5rem;
+    border: #2F4475; 
+    max-height: 30px;
+    text-decoration: none;
+    color:#2F4475; 
+    text-align: center;
+  } 
+
+
 
 .jacket-cards {
     display: flex;
