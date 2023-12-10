@@ -27,8 +27,8 @@ async function renderJacket() {
     const jacketData = await fetchJacket(id);
     const singleJacketContent = document.getElementById("single-jacket-content");
     singleJacketContent.innerHTML = `
-                                        <img src=${jacketData.image}></img>
-                                        <h1>${jacketData.title}</h1>
+                                        <div><img src=${jacketData.image}></img></div>
+                                        <div><h1>${jacketData.title}</h1>
                                         <h1>${jacketData.price}$</h1>
                                         <h3>Colour: ${jacketData.baseColor}</h3>
                                         <p>${jacketData.description}</p>
@@ -41,9 +41,9 @@ async function renderJacket() {
                                         <option>${jacketData.sizes[4]}</option>
                                         <option>${jacketData.sizes[5]}</option>
                                         </select>
-                                        <a href="checkout.html">
+                                        <a href="cart.html">
                                         <button class="button-jacket-page">Add to cart</buttton>
-                                        </a>
+                                        </a></div>
                                     `
 }
 
