@@ -13,6 +13,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Istok+Web&display=swap');
       </style>
     <link href="css/styles.css" rel="stylesheet">
+    <script type="module" src="js/index.js" defer></script>
     <!-- Hotjar Tracking Code for https://aurora-hagen-javascript1.netlify.app/ -->
     <script>
         (function(h,o,t,j,a,r){
@@ -66,24 +67,18 @@
      We strive to answer your queries in three days or less, but it might take longer in some periods like around Christmas. </p>
         </section>
         <div class="supportform">
-        <fieldset>
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" class="form_contact" required>
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" class="form_contact" required>
-            <p>What do you need help with?</p>
-            <select name="topic">
-                <option value="return">I want to return an item</option>
-                <option value="broken">My garment is broken</option>
-                <option value="missing">My parcel is missing</option>
-                <option value="payment">Payment issues</option>
-                <option value="wrong">I recieved the wrong item</option>
-                <option value="other">Other</option>
-            </select>
-            <p>Message</p>
-            <textarea id="message" name="message" class="txtmessage" required></textarea>
-        <input type="submit" value="Send message">
-    </fieldset>
+            <form action="contact.html" method="GET">
+                <fieldset>
+                    <legend class="legendtxt">Fill in all fields to submit your message</legend>
+                    <p><label for="name">Name:</label></p>
+                    <input type="text" name="name" id="name" class="contactform" required>
+                    <p><label for="email">E-mail:</label></p>
+                    <input type="email" name="email" id="email" class="contactform" required>
+                    <p><label for="message">Your message:</label></p>
+                    <textarea id="message" name="message" class="txtmessage" required></textarea><br>
+                    <button class="cta-button">Send message</button>
+                </fieldset>
+         </form>
 </div>
     </main>
     <footer>

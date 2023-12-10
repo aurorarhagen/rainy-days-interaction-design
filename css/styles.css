@@ -52,17 +52,44 @@ li, h1, h2, .specialtxt {
 
 h3, h5, p, label, legend, .subscribefield {
     font-family: 'Istok Web', sans-serif;
+    font-size: 16px;
 }
-
+h3, h5 {
+    font-size: 19px;
+}
 h6 {
     font-size: 1rem;
 }
+
+/**Footer **/
+
 footer {
     background-color: #2F4475; 
     display: grid;
-    grid-template-columns: repeat(3,1fr)
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
 }
 
+footer div {
+    padding-left: 8px;
+}
+
+.footerlink {
+    text-decoration: none;
+    color: white;
+    font-family: 'Istok Web', sans-serif;
+    margin: 15px;
+}
+
+.footertxt {
+    text-decoration: none;
+    color: white;
+    font-family: 'Lora', serif;
+    margin: 10px;
+    font-weight: bold;
+}
+footer img {
+    padding-left: 10px;
+}
 
 body {
     background-color: #F2F3F0;
@@ -147,7 +174,11 @@ main, .aboutmain {
     padding: 20px;
 }
 
-
+.emailfield {
+    font-family: 'Istok Web', sans-serif;
+    font-size: 16px;
+    width: 80px;
+}
 
 .headerstxt, .aboutsubscribe { 
     text-align: center;
@@ -161,14 +192,6 @@ main, .aboutmain {
     text-decoration: none;
 }
 
-.footertxt {
-    color: white;
-}
-
-.footerlink {
-    text-decoration: none;
-    color: white;
-}
 
 header {
     background-color: #2F4475;
@@ -183,7 +206,9 @@ header {
 }
 
 .form_contact, .form_checkout {
-     display: block;
+    display: block;
+    font-family: 'Istok Web', sans-serif;
+    font-size: 16px;
 }
 
 
@@ -199,9 +224,10 @@ ul {
 
 
 .iconsnav {
-    margin-left: 1.5em;
+    margin-left: 2.5em;
     margin-right: 1.5em;
     margin-top: 5em;
+    padding-left: 15px;
 }
 
 .instapic, .inspiration h3{
@@ -219,9 +245,21 @@ ul {
     margin: 0 auto;
 }
 
+/*Homepage*/
+/*Buttons*/
+.cta-button, .subscribefield, .select-size-jacket-page, .button-jacket-page  {
+    width: 120px;
+    height: 35px;
+    font-family: 'Istok Web', sans-serif;
+    font-size: 16px;
+   
+}
+
+
+
 /*All jackets page*/
 
-@media (min-width: 700px) {
+@media (min-width: 1400px) {
     #all-products {
         display: grid;
         grid-template-columns: repeat(3,minmax(0, 1fr));
@@ -230,8 +268,25 @@ ul {
         padding-right: 10px;
         cursor: pointer;
     }
+    .card img {
+        width: 453px;
+        height: 470px;
+    }
 }
-
+@media (max-width: 1400px) and (min-width: 700px)  {
+    #all-products {
+        display: grid;
+        grid-template-columns: repeat(2,minmax(0, 300px));
+        grid-gap: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        cursor: pointer;
+    }
+        .card img {
+            width: 300px;
+            height: 320px;
+        }
+}
 @media (max-width: 700px) {
     #all-products {
         display: grid;
@@ -241,11 +296,15 @@ ul {
         padding-right: 10px;
         cursor: pointer;
     }
+    .card img {
+        width: 180px;
+        height: 195px;
+    }
+    h1, .sortby {
+        margin-left: 5px;
+    }
 }
 
-#all-products img {
-    width: 100%;
-}
 
 .single-jacket {
     padding-top: 20px;
@@ -302,12 +361,41 @@ ul {
     text-decoration: none;
    }
   
-.select-size-jacket-page {
+/*.select-size-jacket-page {
     width: 150px;
    }
-   /** Checkout complete **/
+*/
+/** Checkout complete **/
 
    .checkout-image
    {
     width: 100%;
    }
+
+/** Contact **/
+   
+.send {
+    display: block;
+    margin-top: 10px;
+}
+
+#message {
+    width: 300px;
+    height: 80px;
+    font-family: 'Istok Web', sans-serif;
+    font-size: 16px;
+}
+
+input[type="text"], input[type="email"] {
+    font-size: 16px;
+    font-family: 'Istok Web', sans-serif;
+    width: 250px;
+}
+
+.send {
+    background-color: #b1bedd;
+    font-family: 'Istok Web', sans-serif;
+    font-size: 16px;
+}
+
+/*input[type=submit] <input class="send" type="submit" value="Send message">
